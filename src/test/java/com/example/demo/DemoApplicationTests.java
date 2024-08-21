@@ -18,7 +18,6 @@ class DemoApplicationTests {
 
     @Autowired
     private AccountService accountService;
-    // accountRepository should have been mocked
 
     @Test
     void contextLoads() {
