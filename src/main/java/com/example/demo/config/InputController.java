@@ -4,6 +4,7 @@ import com.example.demo.DTO.Account;
 import com.example.demo.DTO.Deposit;
 import com.example.demo.DTO.Transfer;
 import com.example.demo.service.AccountService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,11 +14,8 @@ import java.util.UUID;
 @RestController
 public class InputController {
 
-    private final AccountService accountService;
-
-    public InputController(AccountService accountService) {
-        this.accountService = accountService;
-    }
+    @Autowired
+    private AccountService accountService;
 
     /* http://localhost:8080/hello */
     /* http://localhost:8080/hello?name=Gudrun */

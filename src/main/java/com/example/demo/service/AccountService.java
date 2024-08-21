@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import jakarta.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.DTO.Account;
 
@@ -11,11 +12,8 @@ import java.util.UUID;
 @Service
 public class AccountService {
 
-    private final AccountRepository accountRepository;
-
-    public AccountService(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Transactional
     public boolean CreateAccount(Account account) {
