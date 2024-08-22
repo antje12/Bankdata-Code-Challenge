@@ -1,6 +1,6 @@
 # Bankdata Code Challenge
 
-Run the project using IntelliJ or by running
+Run the project using IntelliJ or by running:
 ```
 gradlew build
 java -jar build\libs\demo-0.0.1-SNAPSHOT.jar
